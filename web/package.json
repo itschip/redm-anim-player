@@ -4,6 +4,9 @@
   "homepage": "web/build",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^1.8.6",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -11,6 +14,8 @@
     "@types/node": "^16.11.18",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "chakra-ui-autocomplete": "^1.4.5",
+    "framer-motion": "6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",

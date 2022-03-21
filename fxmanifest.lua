@@ -1,16 +1,6 @@
 fx_version "cerulean"
-
-description "Basic React (TypeScript) & Lua Game Scripts Boilerplate"
-author "Project Error"
-version '1.0.0'
-repository 'https://github.com/project-error/fivem-react-boilerplate-lua'
-
-lua54 'yes'
-
-games {
-  "gta5",
-  "rdr3"
-}
+game "rdr3"
+rdr3_warning 'I acknowledge that this is a prerelease build of RedM, and I am aware my resources *will* become incompatible once RedM ships.'
 
 ui_page 'web/build/index.html'
 
