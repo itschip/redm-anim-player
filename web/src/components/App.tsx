@@ -110,7 +110,7 @@ const App: React.FC = () => {
 
   const animNames: string[] = useMemo(() => {
     return anims[animDict];
-  }, [animDict]);
+  }, [animDict, anims]);
 
   return (
     <div className="nui-wrapper">

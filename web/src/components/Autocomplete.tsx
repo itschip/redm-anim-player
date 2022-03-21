@@ -18,7 +18,7 @@ interface AutocompleteListProps {
 const Autocomplete: React.FC<AutocompleteProps> = ({
   value,
   onChange,
-  items,s
+  items,
   placeholder,
   disabled,
 }) => {
@@ -52,32 +52,34 @@ const AutocompleteList: React.FC<AutocompleteListProps> = ({ value, items, onCha
   return (
     <>
       {isOpen && (
-        <Box zIndex={99999999999} bg="gray.600" position="absolute" width="90%" borderRadius={8}>
-          {items &&
-            items
-              ?.filter((item) => item?.match(regExp))
-              ?.map((item) => (
-                <Box
-                  onClick={() => handleSelectedItem(item)}
-                  width="100%"
-                  pl={2}
-                  _hover={{
-                    bg: 'gray.500',
-                    _first: {
-                      borderTopRadius: 8,
-                      borderBottomRadius: 0,
-                    },
-                    _last: {
-                      borderTopRadius: 0,
-                      borderBottomRadius: 8,
-                    },
-                  }}
-                  m={0}
-                  py={1}
-                >
-                  {item}
-                </Box>
-              ))}
+        <Box zIndex={99999999999} bg="gray.600" position="absolute" width="90%" borderRadius={8} height='auto' overflow="hidden">
+          <Box overflow="auto" height="100%">
+            {items &&
+              items
+                ?.filter((item) => item?.match(regExp))
+                ?.map((item) => (
+                  <Box
+                    onClick={() => handleSelectedItem(item)}
+                    width="100%"
+                    pl={2}
+                    _hover={{
+                      bg: 'gray.500',
+                      _first: {
+                        borderTopRadius: 8,
+                        borderBottomRadius: 0,
+                      },
+                      _last: {
+                        borderTopRadius: 0,
+                        borderBottomRadius: 8,
+                      },
+                    }}
+                    m={0}
+                    py={1}
+                  >
+                    {item}
+                  </Box>
+                ))}
+          </Box>
         </Box>
       )}
     </>
