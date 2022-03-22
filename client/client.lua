@@ -11,8 +11,6 @@ end)
 
 RegisterNUICallback('hideFrame', function(_, cb)
   toggleNuiFrame(false)
-  SendReactMessage('setVisible', false)
-  SendReactMessage('redm-anim-player:toggleModal', false)
   debugPrint('Hide NUI frame')
   cb({})
 end)
